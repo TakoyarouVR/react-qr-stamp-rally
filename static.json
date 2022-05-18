@@ -1,8 +1,7 @@
 {
-  "root": "dist/",
+  "root": "/",
   "clean_urls": false,
   "routes": {
-    "/collection": "index.html",
     "/**": "index.html"
   }
 }
