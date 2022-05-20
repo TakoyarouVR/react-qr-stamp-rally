@@ -1,6 +1,7 @@
 {
   "name": "react-minami-qr",
   "version": "1.0.0",
+  "homepage": "./",
   "engines": {
     "node": "15.x"
   },
