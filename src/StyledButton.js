@@ -3,6 +3,7 @@ import  {Button} from '@material-ui/core';
 import React from 'react';
 const useStyles = makeStyles({
     collectionButton: {
+        zIndex: 1,
         marginBottom: "10px",
         backgroundColor: "#F43D16",
         fontSize: 30,

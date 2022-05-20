@@ -1,14 +1,20 @@
 var port = 3000;
+fs = require('fs');
 const path = require('path');
 express = require('express');
-app = express().use(express.static(path.resolve(__dirname, 'app')));
-http = require('http').Server(app);
-app.get('/', function(req, res){
-    res.sendFile(path.resolve(__dirname, 'index.html'));
+http = require('http');
+https = require('https');
+var server = express();
+http.createServer(server).listen(3001)
+server.get('/', function(req, res){
+    res.sendFile(path.resolve(__dirname, 'app/index.html'));
 });
-app.get('/collection', function(req, res){
-    res.sendFile(path.resolve(__dirname, 'index.html'));
+server.get('/collection', function(req, res){
+    res.sendFile(path.resolve(__dirname, 'app/index.html'));
 });
-http.listen(port, function(){
-    console.log("Node server listening on port " + port);
-});
+var sslOptions = {
+    key: fs.readFileAsync('key.pem'),
+    cert: fs.readFileAsync('cert.pem')
+}
+
+https.createServer(sslOptions, server).listen(3000)

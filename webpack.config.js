@@ -7,6 +7,7 @@ module.exports = {
     //mode: 'development',
     mode: 'production',
     //devtool: 'eval',
+    target: 'node',
     entry: "./src/index.js",
     performance: {
         hints: false
