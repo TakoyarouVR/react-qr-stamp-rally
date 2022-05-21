@@ -43,8 +43,10 @@ function Show({pic, n}){
     const { width, height } = useWindowDimensions();
     const widthPixel = ((width / 3) / picWidth).toString() + "%";
     const imgStyle ={
-        marginBottom: "-3.5%",
-        width: {widthPixel}
+        img: {
+            marginBottom: "-3.5%",
+            width: {widthPixel}
+        }
     }    
     if(c == n)
     {
