@@ -15,6 +15,11 @@ import { useWindowDimensions } from './WindowSizeGetter';
 
 const cookies = new Cookie();
 
+const gridStyle ={
+    marginBottom: "-3.5%",
+    width: widthPixel
+}
+
 const ShowImage = () => {
     return (
         <Grid container>
@@ -44,16 +49,16 @@ function Show({pic, n}){
     if(c == n)
     {
         return(
-            <Grid item style={{marginBottom: "-3.5%"}}>
-                <img src={pic} style={{width: widthPixel}}/>
+            <Grid item style={gridStyle}>
+                <img src={pic}/>
             </Grid>
         );
     }
     else
     {
         return(
-            <Grid item style={{marginBottom: "-3.5%"}}>
-                <img src={stamp} style={{width: widthPixel}}/>
+            <Grid item style={gridStyle}>
+                <img src={stamp}/>
             </Grid>
         );
     }
