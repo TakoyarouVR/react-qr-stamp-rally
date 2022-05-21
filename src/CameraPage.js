@@ -37,7 +37,7 @@ class CameraPage extends Component {
                     delay={100}
                     onResult={this.handleScan}
                     videoStyle={{zIndex: 0,width: "100%"}}
-                    videoContainerStyle={{zIndex: 0, position: "fixed", top: 0,left: 0, marginTop: "5%"}}
+                    videoContainerStyle={{zIndex: 0, position: "fixed", top: 50,left: 0}}
                 /> 
             </div>
         );
