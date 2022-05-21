@@ -55,7 +55,7 @@ function Show({pic, n}){
     else
     {
         return(
-            <Grid item style={gridStyle}>
+            <Grid item xs={4}>
                 <img src={stamp}/>
             </Grid>
         );
