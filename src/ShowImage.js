@@ -14,12 +14,6 @@ import stamp from "./pics/Stamp.png";
 import { useWindowDimensions } from './WindowSizeGetter';
 
 const cookies = new Cookie();
-
-const gridStyle ={
-    marginBottom: "-3.5%",
-    width: widthPixel
-}
-
 const ShowImage = () => {
     return (
         <Grid container>
@@ -46,6 +40,10 @@ function Show({pic, n}){
     const c = cookies.get(n);
     const { width, height } = useWindowDimensions();
     widthPixel = (width / 3.5).toString() + "px";
+    const gridStyle ={
+        marginBottom: "-3.5%",
+        width: widthPixel
+    }    
     if(c == n)
     {
         return(
