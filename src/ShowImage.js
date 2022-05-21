@@ -13,6 +13,8 @@ import pic9 from "./pics/9.jpg";
 import stamp from "./pics/Stamp.png";
 import { useWindowDimensions } from './WindowSizeGetter';
 
+const picWidth = 224;
+
 const cookies = new Cookie();
 const ShowImage = () => {
     return (
@@ -39,7 +41,7 @@ const ShowImage = () => {
 function Show({pic, n}){
     const c = cookies.get(n);
     const { width, height } = useWindowDimensions();
-    const widthPixel = (width / 3.5).toString() + "px";
+    const widthPixel = ((width / 3) / picWidth).toString() + "%";
     const gridStyle ={
         marginBottom: "-3.5%",
         width: {widthPixel}
@@ -55,7 +57,7 @@ function Show({pic, n}){
     else
     {
         return(
-            <Grid item xs={4}>
+            <Grid item style={gridStyle}>
                 <img src={stamp}/>
             </Grid>
         );
