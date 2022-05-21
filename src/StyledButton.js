@@ -16,7 +16,7 @@ const useStyles = makeStyles({
         }
     },
 });
-function StyledButton({data}) {
+const StyledButton = ({data}) => {
     const classes = useStyles();
     return (
         <Button className={classes.collectionButton} href={data.refer}>

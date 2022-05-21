@@ -11,10 +11,11 @@ import pic7 from "./pics/7.jpg";
 import pic8 from "./pics/8.jpg";
 import pic9 from "./pics/9.jpg";
 import stamp from "./pics/Stamp.png";
+import { useWindowDimensions } from './WindowSizeGetter';
 
 const cookies = new Cookie();
 
-function ShowImage() {
+const ShowImage = () => {
     return (
         <Grid container>
             <div>
@@ -38,11 +39,12 @@ function ShowImage() {
 
 function Show({pic, n}){
     const c = cookies.get(n);
+    const { width, height } = useWindowDimensions();
     if(c == n)
     {
         return(
             <Grid item style={{marginBottom: "-3.5%"}}>
-                <img src={pic} style={{width: "auto"}}/>
+                <img src={pic} style={{width: width / 3.5}}/>
             </Grid>
         );
     }
@@ -50,7 +52,7 @@ function Show({pic, n}){
     {
         return(
             <Grid item style={{marginBottom: "-3.5%"}}>
-                <img src={stamp} style={{width: "auto"}}/>
+                <img src={stamp} style={{width: width / 3.5}}/>
             </Grid>
         );
     }
