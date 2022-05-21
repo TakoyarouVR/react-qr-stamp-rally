@@ -39,10 +39,10 @@ const ShowImage = () => {
 function Show({pic, n}){
     const c = cookies.get(n);
     const { width, height } = useWindowDimensions();
-    widthPixel = (width / 3.5).toString() + "px";
+    const widthPixel = (width / 3.5).toString() + "px";
     const gridStyle ={
         marginBottom: "-3.5%",
-        width: widthPixel
+        width: {widthPixel}
     }    
     if(c == n)
     {
