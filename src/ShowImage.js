@@ -42,7 +42,7 @@ function Show({pic, n}){
     const c = cookies.get(n);
     const { width, height } = useWindowDimensions();
     const widthPixel = ((width / 3) / picWidth).toString() + "%";
-    const style ={
+    const imgStyle ={
         marginBottom: "-3.5%",
         width: {widthPixel}
     }    
@@ -50,7 +50,7 @@ function Show({pic, n}){
     {
         return(
             <Grid item>
-                <div style={style}>
+                <div style={imgStyle}>
                     <img src={pic}/>
                 </div>
             </Grid>
@@ -60,7 +60,7 @@ function Show({pic, n}){
     {
         return(
             <Grid item>
-                <div style={gridStyle}>
+                <div style={imgStyle}>
                     <img src={stamp}/>
                 </div>
             </Grid>
