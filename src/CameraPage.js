@@ -36,7 +36,7 @@ class CameraPage extends Component {
                     constraints={{facingMode: "environment"}}
                     delay={100}
                     onResult={this.handleScan}
-                    videoStyle={{zIndex: 0,width: "100%", marginTop: "10%"}}
+                    videoStyle={{zIndex: 0,width: "130%", height:"130%",marginTop: "20%"}}
                     videoContainerStyle={{zIndex: 0, position: "fixed", top: 0,left: 0}}
                 /> 
             </div>

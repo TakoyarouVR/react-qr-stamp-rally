@@ -41,12 +41,9 @@ const ShowImage = () => {
 function Show({pic, n}){
     const c = cookies.get(n);
     const { width, height } = useWindowDimensions();
-    const widthPixel = ((width / 3) / picWidth).toString() + "%";
     const imgStyle ={
-        img: {
-            marginBottom: "-3.5%",
-            width: {widthPixel}
-        }
+        marginBottom: "-3.5%",
+        width: "33vw"
     }    
     if(c == n)
     {
