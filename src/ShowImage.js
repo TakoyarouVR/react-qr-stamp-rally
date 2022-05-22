@@ -36,7 +36,7 @@ const ShowImage = () => {
 function Show({pic, n}){
     const c = localStorage.getItem(n);
     const imgStyle ={
-        marginBottom: "-3.7vw",
+        marginBottom: "-1vw",
         maxWidth: "30vw"
     }    
     if(c == n)
