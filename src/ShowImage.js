@@ -45,7 +45,7 @@ function Show({pic, n}){
         marginBottom: "-3.5%",
         marginLeft: "10%",
         marginRight: "10%",
-        maxWidth: (width / 3)
+        maxWidth: "30vw"
     }    
     if(c == n)
     {
