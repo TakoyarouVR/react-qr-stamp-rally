@@ -11,7 +11,7 @@ import pic8 from "./pics/8.jpg";
 import pic9 from "./pics/9.jpg";
 import stamp from "./pics/Stamp.png";
 
-const ids = ["a", "e", "c", "d", "b", "f", "g", "i", "h"]
+const ids = ["a", "b" ,"c", "d" , "e", "f", "g", "h", "i"]
 const pics =[pic1, pic4, pic7, pic2, pic5, pic8, pic3, pic6, pic9]
 
 const ShowImage = () => {
