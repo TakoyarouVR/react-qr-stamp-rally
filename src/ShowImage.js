@@ -11,54 +11,48 @@ import pic8 from "./pics/8.jpg";
 import pic9 from "./pics/9.jpg";
 import stamp from "./pics/Stamp.png";
 
+const ids = ["a", "e", "c", "d", "b", "f", "g", "i", "h"]
+const pics =[pic1, pic4, pic7, pic2, pic5, pic8, pic3, pic6, pic9]
+
 const ShowImage = () => {
     return (
         <Grid container>
-            <div>
-                <Show pic={pic1} n={"a"}/>
-                <Show pic={pic4} n={"d"}/>
-                <Show pic={pic7} n={"g"}/>
-            </div>
-            <div>
-                <Show pic={pic2} n={"b"}/>
-                <Show pic={pic5} n={"e"}/>
-                <Show pic={pic8} n={"h"}/>
-            </div>
-            <div>
-                <Show pic={pic3} n={"c"}/>
-                <Show pic={pic6} n={"f"}/>
-                <Show pic={pic9} n={"i"}/>
-            </div>
+            {Show()}
         </Grid>
     );
 }
 
-function Show({pic, n}){
-    const c = localStorage.getItem(n);
+function Show(){
+    var imgs = [];
     const imgStyle ={
         marginBottom: "-1vw",
         maxWidth: "30vw"
     }    
-    if(c == n)
-    {
-        return(
-            <Grid item>
-                <div style={imgStyle}>
-                    <img src={pic} style={{maxWidth: "100%"}}/>
-                </div>
-            </Grid>
-        );
+    for(let i=0;i<3;i++){
+        for(let j = 0;j<3;j++){
+            const c = localStorage.getItem(ids[i * 3 + j]);
+            
+            if(c == ids[i * 3 + j]){
+                imgs.push(            
+                    <Grid item>
+                        <div style={imgStyle}>
+                            <img src={pics[i * 3 + j]} style={{maxWidth: "100%"}}/>
+                        </div>
+                    </Grid>
+                );
+            }
+            else{
+                imgs.push(
+                    <Grid item>
+                        <div style={imgStyle}>
+                            <img src={stamp} style={{maxWidth: "100%"}}/>
+                        </div>
+                    </Grid>
+                );
+            }
+        }
     }
-    else
-    {
-        return(
-            <Grid item>
-                <div style={imgStyle}>
-                    <img src={stamp} style={{maxWidth: "100%"}}/>
-                </div>
-            </Grid>
-        );
-    }
+    return imgs;
 }
 
 export default ShowImage;
