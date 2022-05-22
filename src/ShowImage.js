@@ -52,7 +52,7 @@ function Show(){
                 );
             }
         }
-        imgs.push(<div>{...arr}</div>); 
+        imgs.push(<div>{arr}</div>); 
         arr = [];
     }
     return imgs;
