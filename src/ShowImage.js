@@ -1,6 +1,5 @@
 import React from 'react';
 import {Grid} from '@material-ui/core'
-import Cookie from 'universal-cookie';
 import pic1 from "./pics/1.jpg";
 import pic2 from "./pics/2.jpg";
 import pic3 from "./pics/3.jpg";
@@ -11,11 +10,7 @@ import pic7 from "./pics/7.jpg";
 import pic8 from "./pics/8.jpg";
 import pic9 from "./pics/9.jpg";
 import stamp from "./pics/Stamp.png";
-import { useWindowDimensions } from './WindowSizeGetter';
 
-const picWidth = 224;
-
-const cookies = new Cookie();
 const ShowImage = () => {
     return (
         <Grid container>
@@ -39,10 +34,9 @@ const ShowImage = () => {
 }
 
 function Show({pic, n}){
-    const c = cookies.get(n);
-    const { width, height } = useWindowDimensions();
+    const c = localStorage.getItem(n);
     const imgStyle ={
-        marginBottom: "-3.7%",
+        marginBottom: "-3.7vw",
         maxWidth: "30vw"
     }    
     if(c == n)

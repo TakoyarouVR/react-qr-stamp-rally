@@ -1,6 +1,5 @@
 import React, { Component} from 'react';
 import { QrReader } from 'react-qr-reader';
-import Cookie from 'universal-cookie';
 import StyledButton from "./StyledButton";
 import Music from './audios/Get.mp3';
 
@@ -17,8 +16,9 @@ class CameraPage extends Component {
         super(props);
         this.handleScan = this.handleScan.bind(this);
     }
+    //localStorageに変更
     handleSetCookie = (data) => {
-        cookies.set(data, data, { path: '/' })
+        localStorage.setItem(data, data);
     };
 
     handleScan = (data) => {
