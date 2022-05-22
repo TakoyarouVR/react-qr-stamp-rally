@@ -7,9 +7,6 @@ const buttonProp = {
     txt: "スタンプを見る",
     refer: "/collection",
 }
-
-const cookies = new Cookie();
-
 class CameraPage extends Component {
     se = new Audio(Music);
     constructor(props){
