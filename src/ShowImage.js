@@ -42,7 +42,7 @@ function Show({pic, n}){
     const c = cookies.get(n);
     const { width, height } = useWindowDimensions();
     const imgStyle ={
-        marginBottom: "-3.5%",
+        marginBottom: "-3.7%",
         maxWidth: "30vw"
     }    
     if(c == n)
