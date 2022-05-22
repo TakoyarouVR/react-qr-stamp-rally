@@ -28,8 +28,8 @@ function Show(){
         marginBottom: "-1vw",
         maxWidth: "30vw"
     }    
-    for(i=0;i<3;i++){
-        for(j = 0;j<2;j++){
+    for(let i=0;i<3;i++){
+        for(let j = 0;j<3;j++){
             const c = localStorage.getItem(ids[i * 3 + j]);
             
             if(c == ids[i * 3 + j]){
