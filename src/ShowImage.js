@@ -43,16 +43,15 @@ function Show({pic, n}){
     const { width, height } = useWindowDimensions();
     const imgStyle ={
         marginBottom: "-3.5%",
-        marginLeft: "6.5vw",
         marginRight: "6.5vw",
-        maxWidth: "20vw"
+        maxWidth: "23vw"
     }    
     if(c == n)
     {
         return(
             <Grid item>
                 <div style={imgStyle}>
-                    <img src={pic}/>
+                    <img src={pic} style={{maxWidth: "100%"}}/>
                 </div>
             </Grid>
         );
@@ -62,7 +61,7 @@ function Show({pic, n}){
         return(
             <Grid item>
                 <div style={imgStyle}>
-                    <img src={stamp}/>
+                    <img src={stamp} style={{maxWidth: "100%"}}/>
                 </div>
             </Grid>
         );
