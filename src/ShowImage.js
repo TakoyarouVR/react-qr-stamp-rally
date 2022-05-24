@@ -24,6 +24,7 @@ const ShowImage = () => {
 
 function Show(){
     var imgs = [];
+    var arr = [];
     const imgStyle ={
         marginBottom: "-1vw",
         maxWidth: "30vw"
@@ -33,7 +34,7 @@ function Show(){
             const c = localStorage.getItem(ids[i * 3 + j]);
             
             if(c == ids[i * 3 + j]){
-                imgs.push(            
+                arr.push(            
                     <Grid item>
                         <div style={imgStyle}>
                             <img src={pics[i * 3 + j]} style={{maxWidth: "100%"}}/>
@@ -42,7 +43,7 @@ function Show(){
                 );
             }
             else{
-                imgs.push(
+                arr.push(
                     <Grid item>
                         <div style={imgStyle}>
                             <img src={stamp} style={{maxWidth: "100%"}}/>
@@ -51,6 +52,8 @@ function Show(){
                 );
             }
         }
+        imgs.push(<div>{arr}</div>); 
+        arr = [];
     }
     return imgs;
 }
