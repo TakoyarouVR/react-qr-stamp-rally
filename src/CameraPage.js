@@ -1,7 +1,6 @@
 import React from 'react';
 import { QrReader } from 'react-qr-reader';
 import StyledButton from "./StyledButton";
-import Music from './audios/Get.mp3';
 import {useNavigate} from 'react-router-dom';
 
 const buttonProp = {
@@ -10,12 +9,10 @@ const buttonProp = {
 }
 const CameraPage = () => {
     const navigate = useNavigate();
-    const se = new Audio(Music);
     const handleScan = (data) => {
         if(data != null){
-            se.play();
             localStorage.setItem(data.text, data.text);
-            navigate('/collection');
+            navigate('/collection', {state: {doPlay: 1}});
         }
     }                  
     return (
