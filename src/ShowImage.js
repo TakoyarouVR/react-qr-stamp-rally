@@ -1,22 +1,21 @@
 import React from 'react';
 import {Grid} from '@material-ui/core'
-import pic1 from "./pics/1.jpg";
-import pic2 from "./pics/2.jpg";
-import pic3 from "./pics/3.jpg";
-import pic4 from "./pics/4.jpg";
-import pic5 from "./pics/5.jpg";
-import pic6 from "./pics/6.jpg";
-import pic7 from "./pics/7.jpg";
-import pic8 from "./pics/8.jpg";
-import pic9 from "./pics/9.jpg";
+import pic1 from "./pics/0.png";
+import pic2 from "./pics/1.png";
+import pic3 from "./pics/2.png";
+import pic4 from "./pics/3.png";
+import pic5 from "./pics/4.png";
+import pic6 from "./pics/5.png";
+import pic7 from "./pics/6.png";
+import pic8 from "./pics/7.png";
+import pic9 from "./pics/8.png";
 import stamp from "./pics/Stamp.png";
 
 const ids = ["a", "d" ,"g", "b" , "e", "h", "c", "f", "i"]
 const pics =[pic1, pic4, pic7, pic2, pic5, pic8, pic3, pic6, pic9]
-
 const ShowImage = () => {
     return (
-        <Grid container>
+        <Grid container style={{backgroundImage: "url(./pics/BackgroundImg.png)"}}>
             {Show()}
         </Grid>
     );
