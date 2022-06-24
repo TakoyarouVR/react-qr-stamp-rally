@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 import Music from './audios/Get.mp3';
 import StyledButton from './StyledButton';
 import ShowImage from './ShowImage';
-import { useLocation } from "react-router-dom"
+import { useLocation } from "react-router-dom";
+import bgImg from './pics/BackgroundImg.png';
 
 const buttonProp = {
     txt: "戻る",
@@ -16,8 +17,11 @@ const CollectionPage = () => {
         const se = new Audio(Music);
         se.play();
     }
+    const _style = {
+        backgroundImage: 'url(' + bgImg + ')'
+    }
     return (
-        <div>
+        <div style={_style}>
             <StyledButton data={buttonProp} />
             <ShowImage />
         </div>

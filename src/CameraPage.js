@@ -2,7 +2,7 @@ import React from 'react';
 import { QrReader } from 'react-qr-reader';
 import StyledButton from "./StyledButton";
 import {useNavigate} from 'react-router-dom';
-
+import bgImg from './pics/BackgroundImg.png';
 const buttonProp = {
     txt: "スタンプを見る",
     refer: "/collection",
@@ -15,8 +15,11 @@ const CameraPage = () => {
             navigate('/collection', {state: {doPlay: 1}});
         }
     }                  
+    const _style = {
+        backgroundImage: 'url(' + bgImg + ')'
+    }
     return (
-        <div>
+        <div style={_style}>
             <StyledButton data={buttonProp}/>
             <QrReader
                 constraints={{facingMode: "environment"}}

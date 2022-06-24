@@ -15,7 +15,7 @@ const ids = ["a", "d" ,"g", "b" , "e", "h", "c", "f", "i"]
 const pics =[pic1, pic4, pic7, pic2, pic5, pic8, pic3, pic6, pic9]
 const ShowImage = () => {
     return (
-        <Grid container style={{backgroundImage: "url(./pics/BackgroundImg.png)"}}>
+        <Grid container>
             {Show()}
         </Grid>
     );
