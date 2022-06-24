@@ -26,7 +26,7 @@ const CameraPage = () => {
                 delay={100}
                 onResult={handleScan}
                 videoStyle={{zIndex: 1,width: "100%", marginTop: "30%"}}
-                videoContainerStyle={{zIndex: 1, position: "fixed", top: 0,left: 0}}
+                videoContainerStyle={{zIndex: 0, position: "fixed", top: 0,left: 0}}
             /> 
         </div>
     );
