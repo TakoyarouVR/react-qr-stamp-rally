@@ -25,8 +25,8 @@ const CameraPage = () => {
                 constraints={{facingMode: "environment"}}
                 delay={100}
                 onResult={handleScan}
-                videoStyle={{zIndex: 0,width: "100%", marginTop: "30%"}}
-                videoContainerStyle={{zIndex: 0, position: "fixed", top: 0,left: 0}}
+                videoStyle={{zIndex: 1,width: "100%", marginTop: "30%"}}
+                videoContainerStyle={{zIndex: 1, position: "fixed", top: 0,left: 0}}
             /> 
         </div>
     );
