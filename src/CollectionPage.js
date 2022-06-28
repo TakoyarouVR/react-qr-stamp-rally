@@ -18,8 +18,10 @@ const CollectionPage = () => {
         se.play();
     }
     const _style = {
+        height: '100vh',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
         backgroundImage: 'url(' + bgImg + ')',
-        backgroundWidth: '2000px'
     }
     return (
         <div style={_style}>
