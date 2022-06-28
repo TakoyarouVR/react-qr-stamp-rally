@@ -19,7 +19,7 @@ const CollectionPage = () => {
     }
     const _style = {
         backgroundImage: 'url(' + bgImg + ')',
-        backgroundSize: '200%'
+        backgroundWidth: '2000px'
     }
     return (
         <div style={_style}>

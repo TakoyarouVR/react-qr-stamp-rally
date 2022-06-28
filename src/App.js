@@ -8,8 +8,8 @@ class App extends Component{
         return(
             <Router>
                 <Routes>
-                    <Route path="/" element={<CameraPage/>} />
-                    <Route path="/collection" element={<CollectionPage/>} />
+                    <Route exact path="/" element={<CameraPage/>} />
+                    <Route exact path="/collection" element={<CollectionPage/>} />
                 </Routes>
             </Router>
         );

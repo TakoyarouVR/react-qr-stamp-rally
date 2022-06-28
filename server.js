@@ -4,12 +4,12 @@ const path = require('path');
 express = require('express');
 https = require('https');
 var server = express();
-server.use(express.static('./app'));
+server.use(express.static('D:\\\\Documents\\react-qr-stamp-rally\\app'));
 server.get('/', function(req, res){
-    res.sendFile(path.resolve(__dirname, 'app/index.html'));
+    res.sendFile('D:\\\\Documents\\react-qr-stamp-rally\\app\\index.html');
 });
 server.get('/collection', function(req, res){
-    res.sendFile(path.resolve(__dirname, 'app/index.html'));
+    res.sendFile('D:\\\\Documents\\react-qr-stamp-rally\\app\\index.html');
 });
 var sslOptions = {
     key: fs.readFileSync('./key.pem'),

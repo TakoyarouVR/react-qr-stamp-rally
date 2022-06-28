@@ -14,8 +14,8 @@ module.exports = {
     },
     optimization: {
         splitChunks: {
-            minSize: 10000,
-            maxSize: 250000,
+            name: 'vendor',
+            chunks: 'initial'
         }
     },
     cache: {
@@ -26,7 +26,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'app'),
-        filename: 'bundle.js',
+        filename: '[name].js',
         publicPath: '/',
     },
     devServer: {
